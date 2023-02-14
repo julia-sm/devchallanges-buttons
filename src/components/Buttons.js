@@ -8,63 +8,20 @@ import {useButtonChangeColor} from '../components/ButtonChangeColor';
 
 export default function Buttons(){
   const [bt4, disableShadow] = useButtonShadow();
-/*
-  function disableShadow (){
-    setStyle(bt4 === "bt4"? "noShadow":"bt4")
-  }*/
+
   const [disable, setDisable] = useState(false);
 
   const [btSize,changeButtonSize ] = useButtonSize("btSize");
-/*
-  function smallBtn (){
-    setStyleSmall(btsmall === "btsmall" ? "smallButton" : "btsmall")
-  }*/
 
   const [btSizeLg, changeButtonSizeLg] = useButtonSizeLarge("btSizeLg")
-/*
-  function largeBtn (){
-    setStyleLarge(btlg === "btlg" ? "largeButton" : "btlg")
-  }
-*/
+
   const [icon, changeIcon] = useButtonIcon(<FaReact />)
 
-  //const [iconName, setIconName] = useState("FaReact");
-/*
-  function changeIcon (){
-     if (iconName === "FaReact"){
-        setIcon(<FaHtml5 />);
-        setIconName("FaHtml5");
-     }
-     else if(iconName === "FaHtml5"){ 
-        setIcon(<FaCss3Alt />);
-        setIconName("FaCss3Alt");
-      }
-      else if(iconName === "FaCss3Alt"){ 
-      setIcon(<FaJs />);
-      setIconName("FaJs");
-      }
-      else{ 
-      setIcon(<FaReact />);
-      setIconName("FaReact");
-   }
-  }*/
-
+  
   const [changeColor,changeButtonColor] = useButtonChangeColor({
     backgroundColor:'#E0E0E0'
   });
-/*
-  function changeButtonColor (){
-    if (changeColor.backgroundColor === '#E0E0E0'){
-      setBtnColor({ backgroundColor:'#3D5AFE'});
-    }
-    else if(changeColor.backgroundColor === '#3D5AFE'){
-      setBtnColor({ backgroundColor:'#1C313A'});
-    }else if (changeColor.backgroundColor === '#1C313A'){
-      setBtnColor({ backgroundColor:'#9A0007'});
-    } else {
-      setBtnColor({ backgroundColor:'#E0E0E0'});
-    }
-  }*/
+
   return(
     <div className="container">
       <nav className = "menubar">
